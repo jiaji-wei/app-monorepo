@@ -40,10 +40,10 @@ import {
   walletNameCanBeUpdated,
 } from './managers/wallet';
 import {
+  getPresetNetworks,
   getPresetToken,
   getPresetTokensOnNetwork,
   networkIsPreset,
-  presetNetworks,
 } from './presets';
 import { ProviderController, fromDBNetworkToChainInfo } from './proxy';
 import {
@@ -663,10 +663,6 @@ class Engine {
           enabled: network.enabled,
           preset: networkIsPreset(network.id),
         });
-      } else {
-        throw new OneKeyInternalError(
-          `listNetworks: unknown network implementation ${network.impl}.`,
-        );
       }
     });
     return ret;
@@ -733,6 +729,7 @@ class Engine {
   async getRPCEndpoints(networkId: string): Promise<Array<string>> {
     // List preset/saved rpc endpoints of a network.
     const network = await this.dbApi.getNetwork(networkId);
+    const presetNetworks = getPresetNetworks();
     const { presetRpcURLs } = presetNetworks[networkId] || {
       presetRpcURLs: [],
     };
