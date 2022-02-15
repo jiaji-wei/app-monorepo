@@ -188,6 +188,7 @@ import ReceiptRefundOutline from "./react/outline/ReceiptRefund";
 import ReceiptTaxOutline from "./react/outline/ReceiptTax";
 import RefreshOutline from "./react/outline/Refresh";
 import ReplyOutline from "./react/outline/Reply";
+import RestoreOutline from "./react/outline/Restore";
 import RewindOutline from "./react/outline/Rewind";
 import RssOutline from "./react/outline/Rss";
 import SaveOutline from "./react/outline/Save";
@@ -673,6 +674,7 @@ export type ICON_NAMES =
   | "ReceiptTaxOutline"
   | "RefreshOutline"
   | "ReplyOutline"
+  | "RestoreOutline"
   | "RewindOutline"
   | "RssOutline"
   | "SaveOutline"
@@ -1158,6 +1160,7 @@ export default {
   ReceiptTaxOutline: ReceiptTaxOutline,
   RefreshOutline: RefreshOutline,
   ReplyOutline: ReplyOutline,
+  RestoreOutline: RestoreOutline,
   RewindOutline: RewindOutline,
   RssOutline: RssOutline,
   SaveOutline: SaveOutline,

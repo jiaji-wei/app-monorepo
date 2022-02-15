@@ -30,14 +30,6 @@ const CreateWalletModal: FC = () => {
   const intl = useIntl();
   const navigation = useNavigation<NavigationProps>();
 
-  // const route =
-  //   useRoute<
-  //     RouteProp<
-  //       CreateWalletRoutesParams,
-  //       CreateWalletModalRoutes.CreateWalletModal
-  //     >
-  //   >();
-
   const content = (
     <Center>
       <VStack space={8} w="full">
@@ -55,8 +47,7 @@ const CreateWalletModal: FC = () => {
             borderRadius="12px"
             px={4}
             onPress={() =>
-              // TODO: Navigate to the app wallet screen
-              navigation.navigate(CreateWalletModalRoutes.CreateWalletModal)
+              navigation.navigate(CreateWalletModalRoutes.AppWalletModal)
             }
           >
             <HStack justifyContent="space-between" alignItems="center">
@@ -95,8 +86,7 @@ const CreateWalletModal: FC = () => {
             borderRadius="12px"
             px={4}
             onPress={() =>
-              // TODO: Navigate to the connect hardware wallet screen
-              navigation.navigate(CreateWalletModalRoutes.CreateWalletModal)
+              navigation.navigate(CreateWalletModalRoutes.ConnectHardwareModal)
             }
           >
             <HStack justifyContent="space-between" alignItems="center">
