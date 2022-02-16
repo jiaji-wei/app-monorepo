@@ -95,7 +95,7 @@ const CreateWalletModal: FC = () => {
                 borderRadius="12px"
                 bg="surface-neutral-default"
               >
-                <Image source={{ uri: MiniDeviceIcon }} width={5} height={30} />
+                <Image source={MiniDeviceIcon} width={5} height={30} />
               </Center>
               <Center
                 borderRadius="6px"
