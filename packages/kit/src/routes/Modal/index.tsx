@@ -17,6 +17,10 @@ import CreateAccountModal, {
   CreateAccountModalRoutes,
   CreateAccountRoutesParams,
 } from './CreateAccount';
+import CreateWalletModalStack, {
+  CreateWalletModalRoutes,
+  CreateWalletRoutesParams,
+} from './CreateWallet';
 import DappApproveStack, {
   DappApproveModalRoutes,
   DappApproveRoutesParams,
@@ -184,6 +188,10 @@ const modalStackScreenList = [
     name: ModalRoutes.DappSignatureModal,
     component: DappSignatureStack,
   },
+  {
+    name: ModalRoutes.CreateWallet,
+    component: CreateWalletModalStack,
+  },
 ];
 
 // export const ModalRoutes = {
@@ -261,6 +269,7 @@ export type ModalTypes = {
   [SubmitRequestRoutes.SubmitRequestModal]: NavigatorScreenParams<SubmitRequestModalRoutesParams>;
   [HistoryRequestRoutes.HistoryRequestModal]: NavigatorScreenParams<HistoryRequestModalRoutesParams>;
   [OnekeyLiteModalRoutes.OnekeyLitePinCodeVerifyModal]: NavigatorScreenParams<OnekeyLiteRoutesParams>;
+  [CreateWalletModalRoutes.CreateWalletModal]: NavigatorScreenParams<CreateWalletRoutesParams>;
   // [OnekeyLiteResetModalRoutes.OnekeyLiteResetModal]: NavigatorScreenParams<OnekeyLiteResetRoutesParams>;
   // [OnekeyLiteChangePinModalRoutes.OnekeyLiteChangePinInputPinModal]: NavigatorScreenParams<OnekeyLiteChangePinRoutesParams>;
   [DappApproveModalRoutes.ApproveModal]: NavigatorScreenParams<DappApproveRoutesParams>;
